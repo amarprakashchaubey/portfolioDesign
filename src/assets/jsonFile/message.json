@@ -1,0 +1,25 @@
+{
+    "personalDetail": {
+        "name": "my full name",
+        "occupation": "Frontend Developer",
+        "email" : "demo@email.cpm",
+        "phoneNumber1": "7854269324",
+        "phoneNumber2": "7854269324",
+        "address1" : "village",
+        "address2" : "village",
+        "post" :    "",
+        "pin"   : "",
+        "state" : "",
+        "profileImage": ""
+    },
+    "promoImage" : {
+        "image1" : "",
+        "image2" : "",
+        "image3" : ""
+    },
+    "social": {
+        "facebook": "www.fb.com",
+        "twitter" : "www.twitter.com",
+        "gmail"   : "www.gmail.com"   
+    }
+}

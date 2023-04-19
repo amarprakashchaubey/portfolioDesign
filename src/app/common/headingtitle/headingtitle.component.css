@@ -1,0 +1,39 @@
+.headerContainer{
+    height: 55px;
+    display: flex; 
+    background: #c5e6fc;
+ }
+ 
+ .headerName{
+   flex-wrap: wrap;
+ }
+ 
+ .headerNavOptionsContainer{
+    flex-wrap: wrap;
+ }
+
+ .navOptions{
+    flex-wrap: wrap;
+ }
+ 
+ .headerNavOption{
+    width: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    justify-content: center;
+ }
+ 
+ .headerNavOption:hover{
+    background-color: #83c9f7;
+    cursor: pointer;
+ }
+ 
+ a {
+    color: black;
+    text-decoration: none;
+ }
+
+ .nameDiv:hover{
+    cursor: pointer;
+ }

@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~font-awesome/css/font-awesome.css';
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.contentBox{border: 1px black solid;
+    background-color: white;
+    position: absolute;
+    right: 40%;
+    top: 50%;
+    height: 100px;
+    width: 264px;
+  }
