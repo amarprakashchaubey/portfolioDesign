@@ -12,3 +12,18 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     height: 100px;
     width: 264px;
   }
+
+
+.labelText{
+  font-size: 15px;
+  padding: 5px 10px;
+  margin-top: 0.5rem;
+  color: #878a99;
+  font-weight: 500;
+}
+
+inputText{
+  color: black; 
+  font-size: 14px;
+  padding: 2px 10px;
+}

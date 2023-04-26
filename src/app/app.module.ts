@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './content/home/home.component';
@@ -10,6 +10,9 @@ import { HeadingtitleComponent } from './common/headingtitle/headingtitle.compon
 import { FooterComponent } from './common/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
+import { SendQueryFormComponent } from './common/send-query-form/send-query-form.component';
+import { SendCaseDetailFormComponent } from './common/send-case-detail-form/send-case-detail-form.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -18,13 +21,17 @@ import { MatCardModule } from '@angular/material/card';
     NewsFeedComponent,
     ContactComponent,
     HeadingtitleComponent,
-    FooterComponent
+    FooterComponent,
+    SendQueryFormComponent,
+    SendCaseDetailFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatCardModule
+    MatCardModule,
+    ReactiveFormsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
