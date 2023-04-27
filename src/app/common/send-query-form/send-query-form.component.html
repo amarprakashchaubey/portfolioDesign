@@ -1,67 +1,57 @@
-<div class = "h-5">
-    <button class= "btn danger"> X </button>
+<div class="d-flex justify-content-end closeDialogButtonCont">
+    <button class= "btn btn-danger closeDialogButton" (click) = "closeDialog()"> X </button>
 </div>
-<div>
-    <form>
-        <hr>
-        <div>
-            <span>Personal Details</span>
-        </div>
-        <div class="form-group">
-            <label for="personName">Name</label>
-            <input type="text" class="form-control" id="personName" placeholder="Enter Full Name">
-        </div>
-        <div class="form-group">
-            <label for="personFatherName">Father's Name</label>
-            <input type="text" class="form-control" id="personFatherName" placeholder="Enter Father's Full Name">
-        </div>
-        <div class="form-group">
-            <label for="Address1">Address</label>
-            <input type="text" class="form-control" id="Address1">
-            <input type="text" class="form-control" id="Address2">
-            <input type="text" class="form-control" id="pincode">
-        </div>
-        <div class="form-group">
-            <label for="tehsil">Tehsil</label>
-            <input type="text" class="form-control" id="tehsil" placeholder="">
-        </div>
-        <div class="form-group">
-            <label for="">Value</label>
-            <input type="text" class="form-control" id="" placeholder="">
-        </div>
-        <hr>
-        <div>
-            <span>Contact Details</span>
-        </div>
-        <div class="form-group">
-            <label for="emailAddress">Email</label>
-            <input type="email" class="form-control" id="emailAddress" placeholder="Enter Valid Email">
-        </div>
-        <div class="form-group">
-            <label for="mobileNumber">Contact Number</label>
-            <input type="text" class="form-control" id="mobileNumber" placeholder="Enter Contact Number">
-        </div>
-        <div class="form-group">
-            <label for="mobileNumber">Alternate Contact Number</label>
-            <input type="text" class="form-control" id="mobileNumber" placeholder="Enter Contact Number">
-        </div>
-        <div>
-            <span>Other Details</span>
-        </div>        
-        <div class="form-group">
-            <label for="caseNumber">Number (If Any)</label>
-            <input type="text" class="form-control" id="caseNumber" placeholder="">
-        </div>        
-        <div class="form-group">
-            <label for="caseDetails">Details</label>
-            <input type="textbox" class="form-control" id="caseDetails" placeholder="Enter case related details">
-        </div>        
-        <div class="form-group">
-            <label for="otherImportantInfo">Other Important Information</label>
-            <input type="textbox" class="form-control" id="otherImportantInfo" placeholder="Any other Important Information want to share?">
-        </div>
-        <div class="d-flex justify-content-center">
-            <button type="submit" disabled = "" class="">Submit</button>
-        </div>
-    </form>
+<div class="formContainer my-2 mx-4">
+    <div>
+        <form [formGroup]="queryDetailForm" (ngSubmit)="onSubmitForm()">
+            <span class="headerTextFormat">Enter Query Details</span>
+            
+            <div class="row">
+                <div class="form-group col-12">
+                    <label for="personName" class="labelText">Name<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="personName" placeholder="Enter Full Name" formControlName = "personName">
+                    <mat-error *ngIf="queryDetailForm.get('personName')?.hasError('required') && queryDetailForm.controls['personName'].touched == true">Name is required</mat-error>
+                    <mat-error *ngIf="queryDetailForm.get('personName')?.hasError('pattern')">pattern</mat-error>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-6">
+                    <label for="mobileNumber" class="labelText">Contact Number<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="mobileNumber" placeholder="Enter Contact Number" formControlName = "contactNumber">
+                    <mat-error *ngIf="queryDetailForm.get('contactNumber')?.hasError('required') && queryDetailForm.controls['contactNumber'].touched == true">Field is required</mat-error>
+                    <mat-error *ngIf="queryDetailForm.get('contactNumber')?.hasError('pattern') && queryDetailForm.controls['contactNumber'].touched == true">Enter valid contact</mat-error>
+                </div>
+                <div class="form-group col-6">
+                    <label for="mobileNumber" class="labelText">Alternate Number</label>
+                    <input type="text" class="form-control" id="mobileNumber" placeholder="Enter Contact Number" formControlName = "altContactNumber">
+                    <mat-error *ngIf="queryDetailForm.get('altContactNumber')?.hasError('required') && queryDetailForm.controls['altContactNumber'].touched == true">Field is required</mat-error>
+                    <mat-error *ngIf="queryDetailForm.get('altContactNumber')?.hasError('pattern') && queryDetailForm.controls['altContactNumber'].touched == true">Enter valid contact</mat-error>
+
+                </div>
+                <div class="form-group col-12">
+                    <label for="emailAddress" class="labelText">Email<span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" id="emailAddress" placeholder="Enter Valid Email" formControlName = "personEmail">
+                    <mat-error *ngIf="queryDetailForm.get('personEmail')?.hasError('required') && queryDetailForm.controls['personEmail'].touched == true">Email is required</mat-error>
+                    <mat-error *ngIf="queryDetailForm.get('personEmail')?.hasError('pattern') && queryDetailForm.controls['personEmail'].touched == true">Enter valid email</mat-error>
+                </div>
+            </div>  
+            <div class="row">        
+                <div class="form-group col-12">
+                    <label for="caseDetails" class="labelText">Query Related to:<span class="text-danger">*</span></label>
+                    <input type="text" row="10" class="form-control" id="caseDetails" placeholder="Enter case related details" formControlName = "queryAbout">
+                    <mat-error *ngIf="queryDetailForm.get('queryAbout')?.hasError('required') && queryDetailForm.controls['queryAbout'].touched == true">Email is required</mat-error>
+                </div>        
+                <div class="form-group col-12">
+                    <label for="otherImportantInfo" class="labelText">Query Description</label>
+                    <textarea  type="textbox" row="10" class="form-control" id="otherImportantInfo" placeholder="Any other Important Information want to share?" formControlName = "queryDescription"></textarea>
+                    <mat-error *ngIf="queryDetailForm.get('queryDescription')?.hasError('required') && queryDetailForm.controls['queryDescription'].touched == true">Email is required</mat-error>
+                </div>
+            </div>      
+            <div class="d-flex justify-content-center my-3">
+                <button type="submit" [disabled] = "queryDetailForm.invalid" class="btn btn-primary">Submit</button>
+            </div>
+            <br>
+        </form>
+    </div>
 </div>

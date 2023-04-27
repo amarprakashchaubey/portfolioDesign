@@ -13,6 +13,7 @@ import { MatCardModule } from '@angular/material/card';
 import { SendQueryFormComponent } from './common/send-query-form/send-query-form.component';
 import { SendCaseDetailFormComponent } from './common/send-case-detail-form/send-case-detail-form.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     BrowserAnimationsModule,
     MatCardModule,
     ReactiveFormsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -13,6 +13,28 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     width: 264px;
   }
 
+.formContainer{
+    width: 92%;
+    border-radius: 5px;
+    height: 100%;
+    max-height: none !important;
+}
+
+.headerTextFormat{
+  font-size: 18px;
+  font-weight: 500;
+  color: #00536F !important;
+  text-decoration: underline;
+}
+
+.closeDialogButtonCont{
+  height: 25px;
+  margin: 5px;
+}
+
+.closeDialogButton{
+  padding: 0px 5px;
+}
 
 .labelText{
   font-size: 15px;
@@ -20,10 +42,4 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   margin-top: 0.5rem;
   color: #878a99;
   font-weight: 500;
-}
-
-inputText{
-  color: black; 
-  font-size: 14px;
-  padding: 2px 10px;
 }
