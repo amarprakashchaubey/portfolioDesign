@@ -1,0 +1,53 @@
+{
+    "newsUpdate": [
+        {
+            "templateImage": "img1.jpg",
+            "heading":"this is heading1 of news one",
+            "sourceLinkUrl": "https://www.google.com/",
+            "briefDetail": "this brief information is in hindi. This is just for chekcing the hindi data available in "
+        },
+        {
+            "templateImage": "",
+            "heading":"यह शीर्षक हिंदी में है2",
+            "sourceLinkUrl": "https://www.google.com/",
+            "briefDetail": "यह संक्षिप्त जानकारी हिंदी में है। यह सिर्फ हिंदी में उपलब्ध डेटा की जांच के लिए है"
+        },
+        {
+            "templateImage": "",
+            "heading":"this is heading3 of news one",
+            "sourceLinkUrl": "https://www.google.com/",
+            "briefDetail": "this brief information is in hindi. This is just for chekcing the hindi data available in "
+        },
+        {
+            "templateImage": "",
+            "heading":"यह शीर्षक हिंदी में है4",
+            "sourceLinkUrl": "https://www.google.com/",
+            "briefDetail": "यह संक्षिप्त जानकारी हिंदी में है। यह सिर्फ हिंदी में उपलब्ध डेटा की जांच के लिए है"
+        },
+        {
+            "templateImage": "",
+            "heading":"this is heading5 of news one",
+            "sourceLinkUrl": "https://www.google.com/",
+            "briefDetail": "this brief information is in hindi. This is just for chekcing the hindi data available in "
+        },
+        {
+            "templateImage": "",
+            "heading":"यह शीर्षक हिंदी में है6",
+            "sourceLinkUrl": "https://www.google.com/",
+            "briefDetail": "यह संक्षिप्त जानकारी हिंदी में है। यह सिर्फ हिंदी में उपलब्ध डेटा की जांच के लिए है"
+        },
+        {
+            "templateImage": "",
+            "heading":"this is heading7 of news one",
+            "sourceLinkUrl": "https://www.google.com/",
+            "briefDetail": "this brief information is in hindi. This is just for chekcing the hindi data available in "
+        },
+        {
+            "templateImage": "",
+            "heading":"यह शीर्षक हिंदी में है8",
+            "sourceLinkUrl": "https://www.google.com/",
+            "briefDetail": "यह संक्षिप्त जानकारी हिंदी में है। यह सिर्फ हिंदी में उपलब्ध डेटा की जांच के लिए है"
+        }
+
+    ]
+}

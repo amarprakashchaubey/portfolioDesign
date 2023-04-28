@@ -1,4 +1,5 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { CommonService } from '../../services/common.service';
 
 @Component({
   selector: 'app-news-feed',
@@ -6,11 +7,11 @@ import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
   styleUrls: ['./news-feed.component.css']
 })
 export class NewsFeedComponent {
-  arr: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-  totalCards: number = this.arr.length;
+  newsArray: any[] = [];
+  totalCards: number = 0;
   currentPage: number = 1;
   pagePosition: string = "0%";
-  cardsPerPage: number = 3;
+  cardsPerPage: number = 6;
   totalPages: number = 0;
   overflowWidth: string | undefined;
   cardWidth: string | undefined;
@@ -29,7 +30,18 @@ export class NewsFeedComponent {
     }
   }
 
+  constructor(private commonService: CommonService){}
+
   ngOnInit() {
+    this.commonService.getNewsData().subscribe((res: { newsUpdate: any; }) => {
+      this.newsArray = res.newsUpdate;
+      this.initialFunction();
+    })
+
+  }
+
+  initialFunction(){
+    this.totalCards = this.newsArray.length;
     this.cardsPerPage = this.getCardsPerPage();
     this.initializeSlider();
   }

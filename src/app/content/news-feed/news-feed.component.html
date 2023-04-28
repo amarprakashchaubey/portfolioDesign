@@ -1,22 +1,19 @@
-<!-- <div class="container" #container>
+<div class="container" #container>
 	<div class="left" *ngIf="totalPages > 1" (click)="currentPage != 1 && changePage(-1)" [ngClass]="{'disabled':currentPage === 1}"></div>
 	<div class="cards" [ngClass]="{'w-100': totalPages === 1}">
 		<div class="overflow" [ngStyle]="{'width': overflowWidth, 'left': pagePosition}">
-			<div class="card" *ngFor="let i of arr; let index = index" [ngStyle]="{'width': cardWidth}">
+			<div class="card" *ngFor="let news of newsArray; let index = index" [ngStyle]="{'width': cardWidth}">
 				<mat-card class="news-card">
 					<mat-card-header>
-					  <mat-card-title>Heading</mat-card-title>
-					  <mat-card-subtitle>Subheading</mat-card-subtitle>
+					  <mat-card-title>{{news.heading}}</mat-card-title>
+					  <!-- <mat-card-subtitle>Subheading</mat-card-subtitle> -->
 					</mat-card-header>
-					<img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="alt">
+					<img mat-card-image src="" alt="alt">
 					<mat-card-content class="p-0">
 					  <p>
-						basic information about the card design. mmazimun we can add 5-6 line in description
+						{{news.briefDetail}}
 					  </p>
 					</mat-card-content>
-					<div class="moreInfoAction">
-						Detail >>
-					</div>
 				  </mat-card>
 			</div>
 		</div>
@@ -26,4 +23,4 @@
 </div>
 <div>
 
-</div> -->
+</div>
